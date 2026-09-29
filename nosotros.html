@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Conoce Vanguard Luxury Motors: nuestra misión, visión y valores.">
+    <meta name="author" content="Andres Tejada">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nosotros.css">
+    <title>Nosotros | Vanguard Luxury Motors</title>
+</head>
+<body class="page">
+    <header class="navbar">
+        <a href="index.html" class="brand">
+            <img src="imagenes/logo.png" alt="" class="logo">
+            <span class="brand-text">
+                <span class="brand-name">Vanguard</span>
+                <span class="brand-sub">Luxury Motors</span>
+            </span>
+        </a>
+
+        <nav class="nav-links" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="vehiculos.html">Vehículos</a>
+            <a href="nosotros.html" class="active">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="about-intro">
+            <p class="eyebrow">Sobre Vanguard Luxury Motors</p>
+            <h1>Una nueva visión del lujo automotriz</h1>
+            <div class="about-body">
+                <div class="about-text">
+                    <p>En Vanguard Luxury Motors somos una marca dedicada al diseño y desarrollo de vehículos de lujo que combinan elegancia, innovación, tecnología y rendimiento.</p>
+                    <p>Nuestra visión nace de una idea sencilla: crear automóviles que no solo destaquen por su apariencia, sino que también ofrezcan una experiencia única en cada recorrido.</p>
+                </div>
+                <div class="about-photo" role="img" aria-label="Detalle de un vehículo Vanguard"></div>
+            </div>
+        </section>
+
+        <div class="about-banner" role="img" aria-label="Vehículo Vanguard en el estudio de diseño"></div>
+
+        <section class="about-pair">
+            <article>
+                <h2>Nuestra misión</h2>
+                <p>Diseñar vehículos exclusivos que integren tecnología avanzada, diseño sofisticado y alto rendimiento, buscando superar las expectativas de nuestros clientes.</p>
+            </article>
+            <article>
+                <h2>Nuestra visión</h2>
+                <p>Convertirnos en una marca reconocida por nuestra innovación, calidad y diseño, llevando el lujo automotriz hacia una nueva generación.</p>
+            </article>
+        </section>
+
+        <section class="about-values">
+            <h2>Nuestros valores</h2>
+            <dl>
+                <div><dt>Innovación</dt><dd>Siempre buscamos nuevas ideas y tecnologías.</dd></div>
+                <div><dt>Elegancia</dt><dd>Cada detalle está pensado para transmitir exclusividad.</dd></div>
+                <div><dt>Calidad</dt><dd>Nos enfocamos en ofrecer productos cuidadosamente diseñados.</dd></div>
+                <div><dt>Rendimiento</dt><dd>Potencia y tecnología para una experiencia excepcional.</dd></div>
+                <div><dt>Exclusividad</dt><dd>Creamos vehículos pensados para quienes buscan algo diferente.</dd></div>
+            </dl>
+        </section>
+    </main>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+        burger.addEventListener('click', () => {
+            const open = menu.classList.toggle('open');
+            burger.setAttribute('aria-expanded', open);
+        });
+    </script>
+</body>
+</html>

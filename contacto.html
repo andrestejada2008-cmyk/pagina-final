@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Contacta con Vanguard Luxury Motors y agenda tu visita.">
+    <meta name="author" content="Andres Tejada">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contacto.css">
+    <title>Contacto | Vanguard Luxury Motors</title>
+</head>
+<body class="page">
+    <header class="navbar">
+        <a href="index.html" class="brand">
+            <img src="imagenes/logo.png" alt="" class="logo">
+            <span class="brand-text">
+                <span class="brand-name">Vanguard</span>
+                <span class="brand-sub">Luxury Motors</span>
+            </span>
+        </a>
+
+        <nav class="nav-links" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="vehiculos.html">Vehículos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main class="contact">
+        <section class="contact-info">
+            <p class="eyebrow">Contacto</p>
+            <h1>Hablemos de su próximo vehículo</h1>
+            <p class="contact-lead">Cuéntenos qué busca y un asesor le responderá para coordinar una visita o una prueba de manejo.</p>
+
+            <dl class="contact-data">
+                <div><dt>Teléfono</dt><dd>+1 (800) 555-0199.</dd></div>
+                <div><dt>Correo</dt><dd>contacto@vanguardluxurymotors.com</dd></div>
+                <div><dt>Dirección</dt><dd>Carrera 42 # 3 Sur 81, Int. 301, Milla de Oro, Medellín</dd></div>
+                <div><dt>Horario</dt><dd>Lunes a sábado, 9:00 a 18:00</dd></div>
+            </dl>
+        </section>
+
+        <form class="contact-form" action="https://formspree.io/f/TU_ID" method="POST">
+            <div class="field">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div class="field-row">
+                <div class="field">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+                </div>
+            </div>
+            <div class="field">
+                <label for="motivo">¿En qué podemos ayudarle?</label>
+                <select id="motivo" name="motivo">
+                    <option>Quiero conocer los vehículos</option>
+                    <option>Agendar una prueba de manejo</option>
+                    <option>Solicitar una cotización</option>
+                    <option>Otra consulta</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+    </main>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+        burger.addEventListener('click', () => {
+            const open = menu.classList.toggle('open');
+            burger.setAttribute('aria-expanded', open);
+        });
+
+        // Si viene desde Vehículos, rellena el formulario con el modelo elegido
+        const modelo = new URLSearchParams(location.search).get('modelo');
+        if (modelo) {
+            document.getElementById('motivo').value = 'Solicitar una cotización';
+            document.getElementById('mensaje').value = 'Hola, me interesa el modelo ' + modelo + '. Quisiera recibir más información.';
+        }
+    </script>
+</body>
+</html>

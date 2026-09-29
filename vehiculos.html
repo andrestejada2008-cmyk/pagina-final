@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Colección de vehículos de lujo Vanguard Luxury Motors.">
+    <meta name="author" content="Andres Tejada">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vehiculos.css">
+    <title>Vehículos | Vanguard Luxury Motors</title>
+</head>
+<body class="page">
+    <header class="navbar">
+        <a href="index.html" class="brand">
+            <img src="imagenes/logo.png" alt="" class="logo">
+            <span class="brand-text">
+                <span class="brand-name">Vanguard</span>
+                <span class="brand-sub">Luxury Motors</span>
+            </span>
+        </a>
+
+        <nav class="nav-links" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="vehiculos.html" class="active">Vehículos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="fleet-intro">
+            <p class="eyebrow">Colección</p>
+            <h1>Nuestros vehículos</h1>
+            <p class="fleet-lead">Tres modelos, un mismo criterio: elegancia, tecnología y rendimiento.</p>
+        </section>
+
+        <section class="fleet">
+            <article class="model">
+                <div class="model-photo photo-1" role="" aria-label="Ferrari F80 "></div>
+                <div class="model-body">
+                    <p class="model-type">Deportivo</p>
+                    <h2>Ferrari F80 </h2>
+                    <p class="model-desc">Un diseño bajo y afilado concebido para cortar el viento, impulsado por una arquitectura híbrida de 1.200 CV que entrega una respuesta inmediata e implacable.</p>
+                    <dl class="specs">
+                        <div><dd>1.200 CV</dd><dt>Potencia</dt></div>
+                        <div><dd>2,15 s</dd><dt>0 a 100 km/h</dt></div>
+                        <div><dd>350 km/h</dd><dt>Velocidad máxima</dt></div>
+                    </dl>
+                    <a href="contacto.html" class="btn">Consultar este modelo</a>
+                </div>
+            </article>
+            <article class="model reverse">
+                <div class="model-photo photo-2" role="img" aria-label="Bugatti Tourbillon"></div>
+                <div class="model-body">
+                    <p class="model-type">hiperdeportivo</p>
+                    <h2>Bugatti Tourbillon </h2>
+                    <p class="model-desc">Líneas musculosas y una mecánica V16 atmosférica concebida para una entrega de potencia instantánea y brutal. Diseñado para quienes buscan la máxima expresión de ingeniería, lujo y carácter sobre el asfalto.</p>
+                    <dl class="specs">
+                        <div><dd>1.800 CV</dd><dt>Potencia</dt></div>
+                        <div><dd>2,0s</dd><dt>0 a 100 km/h</dt></div>
+                        <div><dd>445 km/h</dd><dt>Velocidad máxima</dt></div>
+                    </dl>
+                    <a href="contacto.html" class="btn">Consultar este modelo</a>
+                </div>
+            </article>
+            <article class="model">
+                <div class="model-photo photo-3" role="img" aria-label="Lamborghini Fenomeno Roadster"></div>
+                <div class="model-body">
+                    <p class="model-type">SUV de lujo</p>
+                    <h2>Lamborghini Fenomeno Roadster </h2>
+                    <p class="model-desc">Trazos afilados a cielo abierto y una mecánica V12 híbrida de 1.080 CV concebida para una aceleración pura y visceral. Diseñado para quienes buscan la máxima exclusividad, deportividad y carácter extremo sobre el asfalto.</p>
+                    <dl class="specs">
+                        <div><dd>1.080 CV</dd><dt>Potencia</dt></div>
+                        <div><dd>2,4 s</dd><dt>0 a 100 km/h</dt></div>
+                        <div><dd>340 km/h</dd><dt>Velocidad máxima</dt></div>
+                    </dl>
+                    <a href="contacto.html" class="btn">Consultar este modelo</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+        burger.addEventListener('click', () => {
+            const open = menu.classList.toggle('open');
+            burger.setAttribute('aria-expanded', open);
+        });
+    </script>
+</body>
+</html>

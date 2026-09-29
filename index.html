@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Vanguard Luxury Motors - Más allá del lujo">
+    <meta name="author" content="Andres Tejada">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Vanguard Luxury Motors | Más allá del lujo</title>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="brand">
+            <img src="imagenes/logo.png" alt="" class="logo">
+            <span class="brand-text">
+                <span class="brand-name">Vanguard</span>
+                <span class="brand-sub">Luxury Motors</span>
+            </span>
+        </a>
+
+        <nav class="nav-links" id="menu">
+            <a href="#" class="active">Inicio</a>
+            <a href="vehiculos.html">Vehículos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Vanguard Luxury Motors</p>
+            <h1>El lujo que supera<br>todas las expectativas</h1>
+            <p class="lead">Descubra nuestra exclusiva colección de vehículos de lujo, diseñados para combinar elegancia, tecnología y alto rendimiento. Cada detalle ha sido creado para ofrecer una experiencia de conducción única, sofisticada e inolvidable.</p>
+            <a href="vehiculos.html" class="btn">Descubrir vehículos <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <ul class="pillars">
+            <li>Elegancia</li>
+            <li>Tecnología</li>
+            <li>Rendimiento</li>
+        </ul>
+
+        <a href="#" class="scroll-down" aria-label="Bajar">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 5l5 5 5-5"/></svg>
+        </a>
+    </main>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+        burger.addEventListener('click', () => {
+            const open = menu.classList.toggle('open');
+            burger.setAttribute('aria-expanded', open);
+        });
+    </script>
+</body>
+</html>
